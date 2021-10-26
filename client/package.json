@@ -46,11 +46,20 @@
     ]
   },
   "devDependencies": {
-    "husky": "^7.0.2",
+    "cz-conventional-changelog": "^3.3.0",
     "lint-staged": "^11.1.2",
     "prettier": "2.4.0"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown ."
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "disableSubjectLowerCase": true,
+      "maxHeaderWidth": 72,
+      "maxLineWidth": 80,
+      "defaultType": "chore"
+    }
   }
 }
